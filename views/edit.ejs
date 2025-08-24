@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit your msg</title>
+</head>
+<body>
+         <h3>You are going to edit your msg</h3> 
+        <h2>From :<%= chat.from %></h2>
+        <h2>To : <%= chat.to %></h2>
+        <form method="POST" action="/chats/<%=chat._id%>?_method=PUT">   
+        <textarea name="msg"><%= chat.msg %></textarea>  
+        <button>Edit</button>
+        <!-- we wrote the new msg now i want to add it to my database so we are going to send put request to  -->
+        </form>
+</body>
+</html>
